@@ -11,6 +11,7 @@ package architectureFirstLesson.bll;
  */
 public interface IAnimalActions {
 
+    //Kun metodenavne, så det er lavet til at implementere et design af hvordan man gerne vil have det skal se ud.
     public void makeSound();
 
 }
