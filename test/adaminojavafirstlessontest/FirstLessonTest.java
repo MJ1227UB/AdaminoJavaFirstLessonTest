@@ -104,7 +104,7 @@ public class FirstLessonTest {
         FirstLesson instance = new FirstLesson();
 
         int amountOfCharInString = 0;
-        String result = instance.getStudentName();
+        String result = instance.getStudentFirstName();
 
         assertTrue(amountOfCharInString < result.length());
     }

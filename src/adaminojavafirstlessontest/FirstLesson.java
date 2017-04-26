@@ -18,13 +18,22 @@ public class FirstLesson {
     private boolean isLearning;
     private int currentSemester;
     public static final String TEACHER = "Adam";
-    int[] arrayOfSemesters = {1, 2, 3, 4, 5};
+    private int[] arrayOfSemesters;
     private List<Integer> arrayListOfSemesters;
 
     public FirstLesson() {
         studentFirstName = "Mathias";
         isLearning = true;
         currentSemester = 2;
+        arrayOfSemesters = new int[]{1, 2, 3, 4, 5};
+        arrayListOfSemesters = new ArrayList<>();
+        addNumbersToArrayList();
+    }
+
+    private void addNumbersToArrayList() {
+        for (int arrayOfSemester : arrayOfSemesters) {
+            arrayListOfSemesters.add(arrayOfSemester);
+        }
     }
 
     //Create a constructor which can studentFirstName as argument and sets the value of isLearning to false and currentSemester to 1
@@ -33,6 +42,7 @@ public class FirstLesson {
         isLearning = false;
         currentSemester = 1;
         arrayListOfSemesters = new ArrayList<>();
+        addNumbersToArrayList();
     }
 
     //Create a method to print studentName to the console called printStudentName
@@ -82,7 +92,20 @@ public class FirstLesson {
 
     //Create methods to get all the fields from this class
     //          ?!?!?!?!?!?!?!?!??!?!?!?!
-    public FirstLesson getFirstLesson() {
-        return this;
+    public String getStudentFirstName() {
+        return studentFirstName;
     }
+
+    public boolean isIsLearning() {
+        return isLearning;
+    }
+
+    public int getCurrentSemester() {
+        return currentSemester;
+    }
+
+    public static String getTEACHER() {
+        return TEACHER;
+    }
+
 }
